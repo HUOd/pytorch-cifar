@@ -1,19 +1,14 @@
 '''Train CIFAR10 with PyTorch.'''
-import torch
-import torch.nn as nn
-import torch.optim as optim
-import torch.nn.functional as F
-import torch.backends.cudnn as cudnn
+import argparse
+import os
 
+import torch.backends.cudnn as cudnn
+import torch.optim as optim
 import torchvision
 import torchvision.transforms as transforms
 
-import os
-import argparse
-
 from models import *
 from utils import progress_bar
-
 
 parser = argparse.ArgumentParser(description='PyTorch CIFAR10 Training')
 parser.add_argument('--lr', default=0.1, type=float, help='learning rate')
